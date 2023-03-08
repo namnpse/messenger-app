@@ -20,7 +20,7 @@ class _ConversationsWidgetState extends State<ConversationsWidget> {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: InkWell(
               onTap: () {
-
+                // Navigator.push(context, MaterialPageRoute(builder: (_) => ChatDetailPage()));
               },
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20),
