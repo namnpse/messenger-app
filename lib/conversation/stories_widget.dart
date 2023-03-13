@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constant/data.dart';
 import '../theme/colors.dart';
 
@@ -13,7 +12,7 @@ class StoriesWidget extends StatefulWidget {
 class _StoriesWidgetState extends State<StoriesWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 120,
         // color: Colors.red,
         // padding: EdgeInsets.only(left: 12),
@@ -30,18 +29,19 @@ class _StoriesWidgetState extends State<StoriesWidget> {
                           Container(
                             width: 70,
                             height: 70,
-                            decoration: BoxDecoration(shape: BoxShape.circle, color: grey),
-                            child: Center(
+                            decoration: const BoxDecoration(shape: BoxShape.circle, color: grey),
+                            child: const Center(
                               child: Icon(
                                 Icons.add,
                                 size: 33,
+                                color: Colors.blue,
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 14,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 75,
                             child: Align(
                                 child: Text(
@@ -102,8 +102,8 @@ class _StoriesWidgetState extends State<StoriesWidget> {
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: 10,
+                          const SizedBox(
+                            height: 8,
                           ),
                           SizedBox(
                             width: 75,

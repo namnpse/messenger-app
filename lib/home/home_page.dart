@@ -20,14 +20,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).backgroundColor,
       body: Obx(() => _buildTabViews()),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
+          backgroundColor: Theme.of(context).backgroundColor,
           type: BottomNavigationBarType.fixed,
           currentIndex: controller.bottomIndex.value,
           elevation: 1,
           onTap: controller.setBottomIndex,
+          selectedItemColor: Colors.blue,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.chat_bubble_fill),

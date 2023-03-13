@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import './conversation_header_widget.dart';
-import '../theme/colors.dart';
 import 'stories_widget.dart';
 import 'converstions_widget.dart';
 // import 'package:line_icons/line_icons.dart';
@@ -18,12 +17,12 @@ class _ConversationPage extends State<ConversationPage> {
     return SafeArea(
         child: CustomScrollView(
           slivers: <Widget>[
-            const SliverAppBar(
+            SliverAppBar(
               // elevation: 0,
-              backgroundColor: Colors.white,
+              backgroundColor: Theme.of(context).backgroundColor,
               pinned: true,
               // expandedHeight: 250.0,
-              flexibleSpace: FlexibleSpaceBar(
+              flexibleSpace: const FlexibleSpaceBar(
                 title: ConversationHeaderWidget(),
               ),
             ),
@@ -63,16 +62,17 @@ class _ConversationPage extends State<ConversationPage> {
                     width: double.infinity,
                     height: 40,
                     margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                    decoration: BoxDecoration(color: grey, borderRadius: BorderRadius.circular(15)),
+                    decoration: BoxDecoration(color: Theme.of(context).disabledColor, borderRadius: BorderRadius.circular(15)),
                     child: TextField(
-                      cursorColor: black,
+                      cursorColor: Theme.of(context).primaryColor,
                       controller: _searchController,
                       decoration: InputDecoration(
                           prefixIcon: Icon(
                             Icons.search,
-                            color: black.withOpacity(0.5),
+                            color: Theme.of(context).primaryColor,
                           ),
                           hintText: "Search",
+                          hintStyle: TextStyle(color: Theme.of(context).primaryColor),
                           border: InputBorder.none),
                     ),
                   )
