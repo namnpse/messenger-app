@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../chat/chat_detail_page.dart';
 import '../constant/data.dart';
 import '../theme/colors.dart';
 
@@ -19,7 +20,7 @@ class _ConversationsWidgetState extends State<ConversationsWidget> {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: InkWell(
               onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (_) => const ChatDetailPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ChatDetailPage()));
               },
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20),
